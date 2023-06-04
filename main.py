@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import random
+import model_api
 
 class Text(BaseModel):
     data: str
@@ -15,8 +16,9 @@ def faker_model(text: str) -> bool:
 def is_alive():
     return {"is_alive": True}
 
-@app.post("/text")
+@app.post("/api/text/")
 async def process_text(text: Text):
-    is_fake = faker_model(text.data)
-    response_data = {'fake': is_fake}
+    is_fake = model_api.predict(text.data)
+    print(is_fake)
+    response_data = {"is_fake": is_fake}
     return response_data
