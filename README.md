@@ -2,9 +2,9 @@
 
 This API is used by a browser extension [here](https://github.com/H3XoRuSH/Filipino-Fake-News-Detector).
 
-# How to Run
+### How to Run
 1. Clone the repository
 2. Run `uvicorn main:app` in the terminal
 
-## Credits
+### Credits
 The dataset used in this application can be found in this [link](https://github.com/jcblaisecruz02/Tagalog-fake-news).
