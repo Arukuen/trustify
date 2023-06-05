@@ -28,6 +28,6 @@ def predict(text):
     if num_words >= 150:
         # run input to the vectorizer and model
         text_dtm = imported_vect.transform(text_arr)
-        res = imported_model.predict(text_dtm)[0]
+        res = int(imported_model.predict(text_dtm)[0])
 
     return res
