@@ -8,7 +8,6 @@ with open('./model/model_pickle', 'rb') as f:
 with open('./model/vect_pickle', 'rb') as f:
     imported_vect = pickle.load (f)
 
-
 def predict(text):
     text_arr = []
     text_arr.append(text)
