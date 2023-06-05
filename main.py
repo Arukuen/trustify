@@ -7,7 +7,6 @@ class Text(BaseModel):
 
 app = FastAPI()
 
-
 @app.get("/")
 def is_alive():
     return {"is_alive": True}
