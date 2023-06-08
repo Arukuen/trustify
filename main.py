@@ -16,5 +16,7 @@ def is_alive():
 @app.post("/api/text/")
 async def process_text(text: Text):
     is_fake = model_api.predict(text.data) # call model_api.predict
-    response_data = {"is_fake": is_fake} # create response
+    response_data = {"is_fake": is_fake[0],
+                     "is_fake_svm": is_fake[1],
+                     "is_fake_logistic_regression": is_fake[2]} # create response
     return response_data # respond to HTTP POST request
