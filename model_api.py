@@ -35,7 +35,7 @@ def predict(text):
     res = [2, 2, 2] # default is invalid
 
     # if valid
-    if num_words >= 150:
+    if num_words >= 100:
         # run input to the vectorizer and model
         text_dtm_nb = imported_vect.transform(text_arr)
         text_dtm_svm = imported_vect_svm.transform(text_arr)
