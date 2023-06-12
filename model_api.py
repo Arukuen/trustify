@@ -38,8 +38,8 @@ def predict(text):
     if num_words >= 150:
         # run input to the vectorizer and model
         text_dtm_nb = imported_vect.transform(text_arr)
-        text_dtm_svm = imported_vect_svm.transform(text_arr)
-        text_dtm_logistic_regression = imported_vect_logistic_regression.transform(text_arr)
+        text_dtm_svm = imported_vect_svm.predict(text_arr)
+        text_dtm_logistic_regression = imported_vect_logistic_regression.predict(text_arr)
         res = [int(imported_model.predict(text_dtm_nb)[0]),
                int(imported_model.predict(text_dtm_svm)[0]),
                int(imported_model.predict(text_dtm_logistic_regression)[0])]
